@@ -1,20 +1,20 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 
-interface Person {
+type Person = {
   id:number 
   name: string 
   country: string
 
 }
 
-interface Country  {
+type Country = {
   name:string,
   count:number,
   people:string[]
 }
 
-const People = () => {
+const People : React.FC = () => {
 
   const [people, setPeople] = useState<Person[]>([])
   const [countries, setCountries] = useState<Country[]>([])
